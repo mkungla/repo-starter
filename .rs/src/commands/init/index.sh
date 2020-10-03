@@ -12,7 +12,6 @@ local dest=${RS_PATH}/${RS_DEST}
 rs_init_index() {
   rs_task_start "init"
   shopt -s dotglob
-  rm -rf ${RS_PATH}/.rs
   rm -f ${RS_PATH}/LICENSE
   rm -f ${RS_PATH}/README.md
   rm -f ${RS_PATH}/rs.sh
@@ -27,5 +26,6 @@ rs_init_index() {
     local name="$(basename "${tmpl}")"
     eval "echo \"$(cat "${tmpl}")\"" > $dest$dir/$name
   done
+  rm -rf ${RS_PATH}/.rs
   rs_task_done
 }
