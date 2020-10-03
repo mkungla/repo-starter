@@ -27,5 +27,8 @@ rs_init_index() {
     eval "echo \"$(cat "${tmpl}")\"" > $dest$dir/$name
   done
   rm -rf ${RS_PATH}/.rs
+  git add -A
+  git commit --amend --no-edit
+  git push -f
   rs_task_done
 }
