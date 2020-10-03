@@ -1,5 +1,6 @@
 {
   \"name\": \"${RS_PROJECT_NS}\",
   \"version\": \"0.1.0\",
+  \"description\": \"${RS_PROJECT_DESC}\",
   \"license\": \"SEE LICENSE IN ./LICENSE\"
 }
