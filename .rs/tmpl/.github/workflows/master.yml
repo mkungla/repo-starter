@@ -1,0 +1,16 @@
+name: master
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '*.*'
+    tags-ignore:
+      - '*.*'
+
+jobs:
+  dummy:
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "workflow for ${RS_PROJECT_NAME} not implemented" && exit 1
