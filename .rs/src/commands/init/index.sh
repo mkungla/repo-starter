@@ -15,6 +15,7 @@ rs_init_index() {
   rm -f ${RS_PATH}/LICENSE
   rm -f ${RS_PATH}/README.md
   rm -f ${RS_PATH}/rs.sh
+  rm -f ${RS_PATH}/RS_CONFIG.sh
   for tmpl in $(find ${RS_PATH}/.rs/tmpl/ -type f); do
     # Directory
     local src_dir=$(dirname "${tmpl}")
